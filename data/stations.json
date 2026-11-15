@@ -1,0 +1,194 @@
+{
+  "_note": "Illustrative network inspired by Delhi Metro; times/capacities are sample values.",
+  "stations": [
+    {
+      "id": "AZP",
+      "name": "Azadpur",
+      "capacity": 1400,
+      "x": 380,
+      "y": 50
+    },
+    {
+      "id": "KGT",
+      "name": "Kashmere Gate",
+      "capacity": 2200,
+      "x": 480,
+      "y": 130
+    },
+    {
+      "id": "CHC",
+      "name": "Chandni Chowk",
+      "capacity": 1000,
+      "x": 500,
+      "y": 195
+    },
+    {
+      "id": "NDL",
+      "name": "New Delhi",
+      "capacity": 1800,
+      "x": 510,
+      "y": 255
+    },
+    {
+      "id": "RJC",
+      "name": "Rajiv Chowk",
+      "capacity": 2600,
+      "x": 520,
+      "y": 320
+    },
+    {
+      "id": "CSC",
+      "name": "Central Secretariat",
+      "capacity": 1600,
+      "x": 525,
+      "y": 395
+    },
+    {
+      "id": "INA",
+      "name": "INA",
+      "capacity": 1500,
+      "x": 540,
+      "y": 455
+    },
+    {
+      "id": "HKS",
+      "name": "Hauz Khas",
+      "capacity": 1300,
+      "x": 520,
+      "y": 520
+    },
+    {
+      "id": "SKT",
+      "name": "Saket",
+      "capacity": 1000,
+      "x": 520,
+      "y": 575
+    },
+    {
+      "id": "DW2",
+      "name": "Dwarka Sector 21",
+      "capacity": 1200,
+      "x": 40,
+      "y": 340
+    },
+    {
+      "id": "JPW",
+      "name": "Janakpuri West",
+      "capacity": 1100,
+      "x": 130,
+      "y": 335
+    },
+    {
+      "id": "RJG",
+      "name": "Rajouri Garden",
+      "capacity": 1500,
+      "x": 240,
+      "y": 320
+    },
+    {
+      "id": "KNR",
+      "name": "Kirti Nagar",
+      "capacity": 1100,
+      "x": 320,
+      "y": 325
+    },
+    {
+      "id": "KRB",
+      "name": "Karol Bagh",
+      "capacity": 1300,
+      "x": 420,
+      "y": 322
+    },
+    {
+      "id": "MDH",
+      "name": "Mandi House",
+      "capacity": 1400,
+      "x": 620,
+      "y": 320
+    },
+    {
+      "id": "YMB",
+      "name": "Yamuna Bank",
+      "capacity": 1100,
+      "x": 720,
+      "y": 325
+    },
+    {
+      "id": "ANV",
+      "name": "Anand Vihar",
+      "capacity": 1900,
+      "x": 820,
+      "y": 310
+    },
+    {
+      "id": "VSL",
+      "name": "Vaishali",
+      "capacity": 1000,
+      "x": 930,
+      "y": 290
+    },
+    {
+      "id": "RTL",
+      "name": "Rithala",
+      "capacity": 1000,
+      "x": 90,
+      "y": 50
+    },
+    {
+      "id": "PTP",
+      "name": "Pitampura",
+      "capacity": 900,
+      "x": 200,
+      "y": 60
+    },
+    {
+      "id": "NSP",
+      "name": "Netaji Subhash Place",
+      "capacity": 1500,
+      "x": 300,
+      "y": 110
+    },
+    {
+      "id": "SHD",
+      "name": "Shahdara",
+      "capacity": 1100,
+      "x": 680,
+      "y": 140
+    },
+    {
+      "id": "DLG",
+      "name": "Dilshad Garden",
+      "capacity": 1000,
+      "x": 800,
+      "y": 150
+    },
+    {
+      "id": "PBW",
+      "name": "Punjabi Bagh West",
+      "capacity": 900,
+      "x": 250,
+      "y": 210
+    },
+    {
+      "id": "DHK",
+      "name": "Dhaula Kuan",
+      "capacity": 1000,
+      "x": 380,
+      "y": 430
+    },
+    {
+      "id": "LJP",
+      "name": "Lajpat Nagar",
+      "capacity": 1200,
+      "x": 650,
+      "y": 470
+    },
+    {
+      "id": "MYV",
+      "name": "Mayur Vihar",
+      "capacity": 1100,
+      "x": 760,
+      "y": 420
+    }
+  ]
+}
