@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Metro Crowd Optimisation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>Metro Crowd Optimisation</h1>
+      <p>Crowd-aware route planning &middot; C++ DSA/OOP engine &middot; Node API</p>
+    </div>
+    <div class="tiles" id="summaryTiles">
+      <div class="tile"><span id="sumPeak">–</span><small>Peak load</small></div>
+      <div class="tile"><span id="sumAvg">–</span><small>Average load</small></div>
+      <div class="tile"><span id="sumCrit">–</span><small>Critical stations</small></div>
+      <div class="tile"><span id="sumTick">–</span><small>Time step</small></div>
+    </div>
+  </header>
+
+  <div id="errorBox" class="error" hidden></div>
+
+  <main class="layout">
+    <!-- 1. USER INPUT -->
+    <section class="card controls">
+      <h2>Plan a journey</h2>
+      <label for="sourceSel">Source</label>
+      <select id="sourceSel"></select>
+      <label for="destSel">Destination</label>
+      <select id="destSel"></select>
+      <label for="passengers">Passengers</label>
+      <input id="passengers" type="number" min="1" max="10000" value="200">
+      <label class="check"><input id="commit" type="checkbox" checked> Add these passengers to the network</label>
+      <button id="findBtn" class="primary">Find Optimal Route</button>
+      <p class="hint">Tip: click two stations on the map to pick source and destination.</p>
+
+      <h2>Network controls</h2>
+      <div class="row">
+        <button id="tickBtn">Advance time</button>
+        <button id="resetBtn">Reset crowd</button>
+      </div>
+
+      <h2>Simulation</h2>
+      <label for="simGroups">Passenger groups</label>
+      <input id="simGroups" type="number" min="10" max="3000" value="300">
+      <button id="simBtn">Compare fastest vs crowd-aware</button>
+    </section>
+
+    <!-- 2. METRO MAP -->
+    <section class="card mapCard">
+      <h2>Metro map <span class="legend">
+        <i style="background:#2e9e5b"></i>Low
+        <i style="background:#d9a400"></i>Moderate
+        <i style="background:#e8741a"></i>High
+        <i style="background:#d1242f"></i>Critical
+      </span></h2>
+      <svg id="map" viewBox="0 0 1000 620" role="img" aria-label="Metro network map"></svg>
+    </section>
+
+    <!-- 5. OUTPUT -->
+    <section class="card result">
+      <h2>Recommended route</h2>
+      <div id="result" class="empty">Choose a source and destination, then press <b>Find Optimal Route</b>.</div>
+    </section>
+
+    <section class="card">
+      <h2>Alerts</h2>
+      <ul id="alerts" class="alerts"><li class="none">No alerts yet.</li></ul>
+    </section>
+
+    <section class="card chartCard">
+      <h2>Station load (most crowded first)</h2>
+      <div class="chartBox"><canvas id="loadChart"></canvas></div>
+    </section>
+
+    <section class="card chartCard">
+      <h2>Simulation: peak station load over time</h2>
+      <div id="simSummary" class="simSummary">Run a simulation to compare the two routing modes.</div>
+      <div class="chartBox"><canvas id="simChart"></canvas></div>
+    </section>
+  </main>
+
+  <!-- Chart.js: served by our own server (npm install); falls back to a CDN copy -->
+  <script src="/vendor/chart.umd.js" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.js'"></script>
+  <script src="app.js"></script>
+</body>
+</html>
